@@ -1,5 +1,5 @@
 import { Header, Footer } from '../components/layout';
-
+import { AppProvider } from '../components/AppContext';
 import { Roboto } from 'next/font/google';
 import './globals.css';
 
@@ -15,9 +15,11 @@ export default function RootLayout({ children }) {
         <html lang="en">
             <body className={roboto.className}>
                 <main className="max-w-4xl mx-auto p-4">
-                    <Header />
-                    {children}
-                    <Footer />
+                    <AppProvider>
+                        <Header />
+                        {children}
+                        <Footer />
+                    </AppProvider>
                 </main>
             </body>
         </html>
