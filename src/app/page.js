@@ -1,7 +1,4 @@
-import AboutUs from '@/components/layout/AboutUs';
-import Contact from '@/components/layout/Contact';
-import Hero from '@/components/layout/Hero';
-import HomeMenu from '@/components/layout/HomeMenu';
+import { AboutUs, Contact, Hero, HomeMenu } from '../components/layout';
 
 export default function Home() {
     return (
